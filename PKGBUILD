@@ -7,7 +7,7 @@ license=('GPL3')
 arch=('x86_64')
 url='http://gpodder.org/'
 conflicts=('gpodder' 'gpodder2' 'gpodder-git')
-depends=('iproute2' 'pygtk' 'python2-dbus' 'python2-podcastparser' 'python2-mygpoclient')
+depends=('iproute2' 'pygtk' 'dbus-python2' 'python2-podcastparser' 'python2-mygpoclient')
 makedepends=('intltool' 'imagemagick' 'help2man')
 
 source=("${pkgname}-${pkgver}.tar.gz::http://${pkgname}.org/source/${pkgver}")
