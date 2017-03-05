@@ -21,5 +21,5 @@ package() {
          -e 's|#!/usr/bin/env python$|#!/usr/bin/env python2|' \
     $(find $pkgdir/usr/lib/python2.7/site-packages/gpodder/ -name '*.py')
 }
-md5sums=('56d891649d9ac8a0b9c5e47471a8119f')
+
 sha1sums=('77aa49442fe3abe9aa84f69f5be5319cf5f6cb0b')
