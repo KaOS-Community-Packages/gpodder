@@ -1,7 +1,7 @@
 
 pkgname=gpodder
-pkgver=3.9.3
-pkgrel=1
+pkgver=3.10.7
+pkgrel=2
 pkgdesc='A podcast receiver/catcher'
 license=('GPL3')
 arch=('x86_64')
