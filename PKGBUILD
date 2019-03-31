@@ -1,25 +1,22 @@
 
 pkgname=gpodder
 pkgver=3.10.7
-pkgrel=2
-pkgdesc='A podcast receiver/catcher'
-license=('GPL3')
+pkgrel=1
+pkgdesc='Podcast client written in Python using GTK+'
 arch=('x86_64')
-url='http://gpodder.org/'
-conflicts=('gpodder' 'gpodder2' 'gpodder-git')
-depends=('iproute2' 'pygtk' 'dbus-python2' 'python2-podcastparser' 'python2-mygpoclient')
-makedepends=('intltool' 'imagemagick' 'help2man')
+url='https://gpodder.github.io/'
+license=(GPL3)
+depends=(gtk3 python-cairo python-dbus python-gobject python-mygpoclient python-podcastparser)
+makedepends=(intltool)
+source=($pkgname-$pkgver.tar.gz::http://github.com/gpodder/$pkgname/archive/$pkgver.tar.gz)
+sha256sums=('85a7beec3f63c6768c811482ad6e934b0527c29f03e903ca0f82d2e764cdad76')
 
-source=("${pkgname}-${pkgver}.tar.gz::http://${pkgname}.org/source/${pkgver}")
-
-package() {
-  cd "${srcdir}/${pkgname}-${pkgver}"
-
-  PYTHON=python2 DESTDIR=${pkgdir} make install || return 1
-
-  sed -i -e 's|#!/usr/bin/python$|#!/usr/bin/python2|' \
-         -e 's|#!/usr/bin/env python$|#!/usr/bin/env python2|' \
-    $(find $pkgdir/usr/lib/python2.7/site-packages/gpodder/ -name '*.py')
+build() {
+  cd $pkgname-$pkgver
+  make messages
 }
 
-sha1sums=('77aa49442fe3abe9aa84f69f5be5319cf5f6cb0b')
+package() {
+  cd $pkgname-$pkgver
+  make DESTDIR="$pkgdir" install
+}
