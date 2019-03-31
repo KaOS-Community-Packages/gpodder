@@ -1,7 +1,7 @@
 
 pkgname=gpodder
 pkgver=3.10.7
-pkgrel=1
+pkgrel=2
 pkgdesc='Podcast client written in Python using GTK+'
 arch=('x86_64')
 url='https://gpodder.github.io/'
