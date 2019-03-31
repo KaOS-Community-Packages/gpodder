@@ -1,12 +1,12 @@
 
 pkgname=gpodder
 pkgver=3.10.7
-pkgrel=2
+pkgrel=3
 pkgdesc='Podcast client written in Python using GTK+'
 arch=('x86_64')
 url='https://gpodder.github.io/'
 license=(GPL3)
-depends=(gtk3 python2-cairo dbus-python2 python2-gobject python2-mygpoclient python2-podcastparser)
+depends=(gtk3 python3-cairo dbus-python3 python3-gobject python3-mygpoclient python3-podcastparser)
 makedepends=(intltool)
 source=($pkgname-$pkgver.tar.gz::http://github.com/gpodder/$pkgname/archive/$pkgver.tar.gz)
 sha256sums=('85a7beec3f63c6768c811482ad6e934b0527c29f03e903ca0f82d2e764cdad76')
