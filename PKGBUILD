@@ -1,6 +1,6 @@
 
 pkgname=gpodder
-pkgver=3.10.7
+pkgver=3.10.17
 pkgrel=1
 pkgdesc='Podcast client written in Python using GTK+'
 arch=('x86_64')
